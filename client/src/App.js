@@ -3,6 +3,7 @@ import Aos from 'aos'
 import 'aos/dist/aos.css'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Header from './components/layout/Header'
+
 import Footer from './components/layout/Footer'
 import Home from './screens/Home'
 import ServiceDetail from './components/serviceDetails/ServiceDetail'
@@ -17,6 +18,7 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
+
       <Header />
       <main>
         <Switch>

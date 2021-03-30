@@ -1,0 +1,24 @@
+body {
+  top: 0px !important;
+}
+
+.goog-logo-link {
+  display: none !important;
+}
+
+.goog-te-gadget {
+  color: transparent !important;
+}
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+.goog-te-gadget .goog-te-combo {
+  color: #c11e8a !important;
+  padding: 10px;
+  background-color: #121212;
+  border: none !important;
+  transition: ease-in 2s;
+}
+.goog-te-gadget .goog-te-combo:active {
+  border: none !important;
+}

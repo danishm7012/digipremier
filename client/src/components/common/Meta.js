@@ -12,9 +12,10 @@ const Meta = ({ title, description, keywords }) => {
 }
 
 Meta.defaultProps = {
-  title: 'Welcome To Paradise Group Of Companies | Home',
-  description: 'We sell the best products for cheap',
-  keywords: 'real estate, import and export, shipping and logistics',
+  title: 'Welcome To DigiPremier | Home',
+  description: 'Digital marketing company',
+  keywords:
+    'real estate marketing, import and export advertisment, shipping and logistics marketing',
 }
 
 export default Meta

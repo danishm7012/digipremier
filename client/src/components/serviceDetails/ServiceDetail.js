@@ -4,6 +4,7 @@ import { Row, Container, Col, Image, Button } from 'react-bootstrap'
 
 import ServiceData from '../../Data/serviceData'
 import './serviceDetail.css'
+import Meta from '../common/Meta'
 
 function ServiceDetail({ match }) {
   const [service, setService] = useState({})
@@ -17,6 +18,7 @@ function ServiceDetail({ match }) {
   }, [ServiceId])
   return (
     <div className='service-detail'>
+      <Meta title={`${service.name}`} />
       <Container>
         <Row>
           {' '}

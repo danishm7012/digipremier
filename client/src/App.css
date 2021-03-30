@@ -1,0 +1,27 @@
+.section {
+  background-color: rgb(12, 12, 12);
+  height: auto;
+  width: 100%;
+  padding-top: 5rem;
+}
+h1 {
+  color: #ed9321;
+}
+h3 {
+  color: #ed9321;
+}
+h5 {
+  color: #0098ed;
+  padding-top: 1rem;
+}
+
+.service-p {
+  padding-top: 1rem;
+  color: whitesmoke;
+}
+
+.service-p span {
+  font-weight: lighter;
+  color: tomato;
+  font-weight: lighter;
+}

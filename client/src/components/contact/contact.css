@@ -5,7 +5,17 @@
   width: 100%;
   background: black;
 }
-
+.text-line {
+  background-color: transparent;
+  color: #eeeeee;
+  outline: none;
+  outline-style: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid #eeeeee 1px;
+  padding: 3px 10px;
+}
 .contact .info i {
   font-size: 20px;
   background: #ed9321;
@@ -121,7 +131,7 @@
 }
 
 .contact .php-email-form button[type='submit'] {
-  background: #ed9321;
+  background: #0098ed;
   border: 0;
   padding: 10px 24px;
   color: #151515;
@@ -130,7 +140,7 @@
 }
 
 .contact .php-email-form button[type='submit']:hover {
-  background: #0098ed;
+  background: #ed9321;
 }
 
 @-webkit-keyframes animate-loading {

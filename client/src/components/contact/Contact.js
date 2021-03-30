@@ -53,7 +53,7 @@ const Contact = () => {
                   <input
                     type='text'
                     name='name'
-                    class='form-control'
+                    class='form-control text-line'
                     id='name'
                     placeholder='Your Name'
                     data-rule='minlen:4'
@@ -64,7 +64,7 @@ const Contact = () => {
                 <div class='col-md-6 form-group mt-3 mt-md-0'>
                   <input
                     type='email'
-                    class='form-control'
+                    class='form-control text-line'
                     name='email'
                     id='email'
                     placeholder='Your Email'
@@ -77,7 +77,7 @@ const Contact = () => {
               <div class='form-group mt-3'>
                 <input
                   type='text'
-                  class='form-control'
+                  class='form-control text-line'
                   name='subject'
                   id='subject'
                   placeholder='Subject'
@@ -88,7 +88,7 @@ const Contact = () => {
               </div>
               <div class='form-group mt-3'>
                 <textarea
-                  class='form-control'
+                  class='form-control text-line'
                   name='message'
                   rows='5'
                   data-rule='required'

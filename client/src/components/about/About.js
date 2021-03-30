@@ -35,15 +35,18 @@ const About = () => {
               tools in successful business increase manifold in a few years. It
               seems permanent phenomena in the future as well. At present, it is
               the key to marketing for promotion of brands and reaching high
-              potential of customers, hot and convertible leads . We are here to
-              help you with our experts regarding your business marketing
-              solutions and several essential tips you are running out of. We
-              know how to create sale funnels, and we are an authority in
-              targeted audience and end-users through our business intelligence
-              strategies. We are implementing a Successful model to reach the
-              specific clientele. What are you waiting for when we have got your
-              back using the following potentials of digital marketing as a key
-              to your success? Go ahead and check out what we have for you.
+              potential of customers, hot and convertible leads.
+              <br /> We are here to help you with our experts regarding your
+              business marketing solutions and several essential tips you are
+              running out of. We know how to create sale funnels, and we are an
+              authority in targeted audience and end-users through our business
+              intelligence strategies. We are implementing a Successful model to
+              reach the specific clientele.
+              <br />
+              <br /> What are you waiting for when we have got your back using
+              the following potentials of digital marketing as a key to your
+              success? <br />
+              Go ahead and check out what we have for you.
             </p>
           </Col>
         </Row>

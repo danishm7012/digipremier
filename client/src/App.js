@@ -10,13 +10,13 @@ import Career from './components/career/Career'
 import Clients from './components/clients/Clients'
 import Blogs from './components/Blogs/Blogs'
 import BlogDetail from './components/BlogDetail/BlogDetail'
-import scrollToTop from './components/common/scrollToTop'
+import ScrollToTop from './components/common/scrollToTop'
 
 function App() {
   Aos.init({ duration: 500, offset: 150 })
   return (
     <Router>
-      <scrollToTop />
+      <ScrollToTop />
       <Header />
       <main>
         <Switch>

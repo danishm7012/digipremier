@@ -1,9 +1,41 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './footer.css'
 import { Link } from 'react-scroll'
 import { LinkContainer } from 'react-router-bootstrap'
+import axios from 'axios'
+import { Form } from 'react-bootstrap'
+import Message from '../common/Message'
 
 const Footer = () => {
+  const [email, setEmail] = useState('')
+  const [errors, setErrors] = useState({})
+
+  const [validated, setValidated] = useState(false)
+
+  const submitHandler = (event) => {
+    const form = event.currentTarget
+    if (form.checkValidity() === false) {
+      event.preventDefault()
+      event.stopPropagation()
+    }
+
+    setValidated(true)
+
+    let contactData = { email }
+    const config = {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    }
+
+    axios
+      .post('/api/news/add', contactData, config)
+      .then((res) => {
+        alert('Submitted Successfully!')
+      })
+      .catch((err) => setErrors(err.response.data))
+  }
+
   return (
     <>
       <footer id='footer'>
@@ -11,7 +43,7 @@ const Footer = () => {
           <div class='footer-top'>
             <div class='container'>
               <div class='row'>
-                <div class='col-lg-6 col-md-6'>
+                <div class='col-lg-4 col-md-4'>
                   <div class='footer-info'>
                     <Link to='slider'>
                       <LinkContainer to='/'>
@@ -74,10 +106,61 @@ const Footer = () => {
                     </div>
                   </div>
                 </div>
-                <div className=' col-lg-6 col-md-6'>
-                  <form>
-                    <h3 className=' text-center mb-4'>Subscribe</h3>
-                  </form>
+                <div class='col-lg-4 col-md-4 footer-links'>
+                  <h4>Useful Links</h4>
+                  <ul>
+                    <Link to='slider'>
+                      <LinkContainer to='/'>
+                        <li>
+                          <i className='fas fa-chevron-right'></i> Home
+                        </li>
+                      </LinkContainer>
+                    </Link>{' '}
+                    <br />
+                    <Link to='about'>
+                      <LinkContainer to='/'>
+                        <li>
+                          <i className='fas fa-chevron-right'></i> About us
+                        </li>
+                      </LinkContainer>
+                    </Link>
+                    <LinkContainer className='link-container' to='/info/career'>
+                      <li>
+                        <i className='fas fa-chevron-right'></i> Career
+                      </li>
+                    </LinkContainer>
+                    <LinkContainer to='/info/blogs' className='link-container'>
+                      <li>
+                        <i className='fas fa-chevron-right'></i> Blogs
+                      </li>
+                    </LinkContainer>
+                  </ul>
+                </div>
+
+                <div class='col-lg-4 col-md-4 footer-newsletter'>
+                  <h4>Our Newsletter</h4>
+                  <p>
+                    Enter your email ID to get the latest news and feature
+                    stories on our businesses, community initiatives, heritage
+                    and people.
+                  </p>
+
+                  <Form
+                    novalidate
+                    validated={validated}
+                    onSubmit={submitHandler}
+                  >
+                    <input
+                      type='email'
+                      name='email'
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                    />
+                    <input type='submit' value='Subscribe' />
+                    {errors.email && (
+                      <Message variant='danger'>{errors.email}</Message>
+                    )}
+                  </Form>
                 </div>
               </div>
             </div>

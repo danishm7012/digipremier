@@ -4,14 +4,13 @@ import 'aos/dist/aos.css'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Header from './components/layout/Header'
 import Footer from './components/layout/Footer'
-import scrollToTop from './components/common/scrollToTop'
 import Home from './screens/Home'
-
 import ServiceDetail from './components/serviceDetails/ServiceDetail'
 import Career from './components/career/Career'
 import Clients from './components/clients/Clients'
 import Blogs from './components/Blogs/Blogs'
 import BlogDetail from './components/BlogDetail/BlogDetail'
+import scrollToTop from './components/common/scrollToTop'
 
 function App() {
   Aos.init({ duration: 500, offset: 150 })
@@ -19,7 +18,6 @@ function App() {
     <Router>
       <scrollToTop />
       <Header />
-
       <main>
         <Switch>
           <Route path='/info/career' exact component={Career} />

@@ -1,6 +1,40 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Message from '../common/Message'
+import axios from 'axios'
+import { Col, Form, Button } from 'react-bootstrap'
 import './contact.css'
 const Contact = () => {
+  const [email, setEmail] = useState('')
+  const [name, setName] = useState('')
+  const [subject, setSubject] = useState('')
+  const [message, setMessage] = useState('')
+
+  const [success, setSuccess] = useState('')
+  const [errors, setErrors] = useState({})
+
+  const submitHandler = (event) => {
+    event.preventDefault()
+
+    let contactData = { name, email, subject, message }
+    const config = {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    }
+
+    axios
+      .post('/api/contact/add', contactData, config)
+      .then((res) => {
+        setErrors({})
+        alert(res.data.success)
+        setSuccess(res.data.success)
+      })
+      .catch((err) => {
+        setSuccess(false)
+        setErrors(err.response.data)
+      })
+  }
+
   return (
     <section id='contact' class='contact'>
       <div class='container' data-aos='fade-up'>
@@ -19,7 +53,7 @@ const Contact = () => {
           ></iframe>
         </div>
 
-        <div class='row mt-5'>
+        <div class='row'>
           <div class='col-lg-4'>
             <div class='info'>
               <div class='address'>
@@ -42,72 +76,78 @@ const Contact = () => {
             </div>
           </div>
 
-          <div class='col-lg-8 mt-5 mt-lg-0'>
-            <form
-              action='forms/contact.php'
-              method='post'
-              class='php-email-form'
-            >
-              <div class='row'>
-                <div class='col-md-6 form-group'>
-                  <input
+          <div class='col-lg-8'>
+            <Form onSubmit={submitHandler}>
+              <h2 className='py-1'>GET IN TOUCH WITH US.</h2>
+              <Form.Row>
+                <Form.Group as={Col} controlId='formGridName'>
+                  <Form.Control
                     type='text'
-                    name='name'
-                    class='form-control text-line'
-                    id='name'
                     placeholder='Your Name'
-                    data-rule='minlen:4'
-                    data-msg='Please enter at least 4 chars'
+                    value={name}
+                    isInvalid={errors.name}
+                    className='text-line'
+                    onChange={(e) => setName(e.target.value)}
                   />
-                  <div class='validate'></div>
-                </div>
-                <div class='col-md-6 form-group mt-3 mt-md-0'>
-                  <input
+
+                  <Form.Control.Feedback type='invalid'>
+                    {errors.name}
+                  </Form.Control.Feedback>
+                </Form.Group>
+
+                <Form.Group as={Col} controlId='formGridEmail'>
+                  <Form.Control
                     type='email'
-                    class='form-control text-line'
-                    name='email'
-                    id='email'
                     placeholder='Your Email'
-                    data-rule='email'
-                    data-msg='Please enter a valid email'
+                    value={email}
+                    isInvalid={errors.email}
+                    className='text-line'
+                    onChange={(e) => setEmail(e.target.value)}
                   />
-                  <div class='validate'></div>
-                </div>
-              </div>
-              <div class='form-group mt-3'>
-                <input
+
+                  <Form.Control.Feedback type='invalid'>
+                    {errors.email}
+                  </Form.Control.Feedback>
+                </Form.Group>
+              </Form.Row>
+
+              <Form.Group controlId='formGridAddress1'>
+                <Form.Control
                   type='text'
-                  class='form-control text-line'
-                  name='subject'
-                  id='subject'
                   placeholder='Subject'
-                  data-rule='minlen:4'
-                  data-msg='Please enter at least 8 chars of subject'
+                  value={subject}
+                  isInvalid={errors.subject}
+                  className='text-line'
+                  onChange={(e) => setSubject(e.target.value)}
                 />
-                <div class='validate'></div>
+
+                <Form.Control.Feedback type='invalid'>
+                  {errors.subject}
+                </Form.Control.Feedback>
+              </Form.Group>
+
+              <Form.Group controlId='formTextarea'>
+                <Form.Control
+                  as='textarea'
+                  placeholder='Your Message'
+                  value={message}
+                  isInvalid={errors.message}
+                  className='text-line'
+                  onChange={(e) => setMessage(e.target.value)}
+                  rows={6}
+                />
+
+                <Form.Control.Feedback type='invalid'>
+                  {errors.message}
+                </Form.Control.Feedback>
+              </Form.Group>
+              {success && <Message variant='success'>{success}</Message>}
+              <div className='text-center'>
+                <Button className='contact-btn' type='submit'>
+                  Send Message
+                </Button>
               </div>
-              <div class='form-group mt-3'>
-                <textarea
-                  class='form-control text-line'
-                  name='message'
-                  rows='5'
-                  data-rule='required'
-                  data-msg='Please write something for us'
-                  placeholder='Message'
-                ></textarea>
-                <div class='validate'></div>
-              </div>
-              <div class='mb-3'>
-                <div class='loading'>Loading</div>
-                <div class='error-message'></div>
-                <div class='sent-message'>
-                  Your message has been sent. Thank you!
-                </div>
-              </div>
-              <div class='text-center'>
-                <button type='submit'>Send Message</button>
-              </div>
-            </form>
+            </Form>
           </div>
         </div>
       </div>

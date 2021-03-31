@@ -25,3 +25,27 @@ h5 {
   color: tomato;
   font-weight: lighter;
 }
+
+.text-line {
+  background-color: transparent;
+  color: #eeeeee;
+  outline: none;
+  outline-style: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid #eeeeee 1px;
+  padding: 3px 10px;
+}
+.contact-btn {
+  background: #0098ed;
+  border: 0;
+  padding: 10px 24px;
+  color: #151515;
+  transition: 0.4s;
+  border-radius: 4px;
+}
+
+.contact-btn:hover {
+  background: #ed9321;
+}

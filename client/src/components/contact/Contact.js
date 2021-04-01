@@ -38,19 +38,78 @@ const Contact = () => {
   return (
     <section id='contact' class='contact'>
       <div class='container' data-aos='fade-up'>
-        <div class='section-title'>
-          <br />
-          <h1>Contact Us: </h1>
-        </div>
+        <div className='py-4 text-center'>
+          <Form onSubmit={submitHandler}>
+            <h1>GET IN TOUCH WITH US.</h1>
+            <Form.Row>
+              <Form.Group as={Col} controlId='formGridName'>
+                <Form.Control
+                  type='text'
+                  placeholder='Your Name'
+                  value={name}
+                  isInvalid={errors.name}
+                  className='text-line'
+                  onChange={(e) => setName(e.target.value)}
+                />
 
-        <div>
-          <iframe
-            style={{ width: '100%', height: '270px' }}
-            title='map location'
-            src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2844.856021269435!2d74.44888923752985!3d31.476873046867944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39190920e59fccd3%3A0x56cae6ee2c7a479b!2sDHA%20Phase%206%2C%20Lahore%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1617100492948!5m2!1sen!2s'
-            frameborder='0'
-            allowfullscreen
-          ></iframe>
+                <Form.Control.Feedback type='invalid'>
+                  {errors.name}
+                </Form.Control.Feedback>
+              </Form.Group>
+
+              <Form.Group as={Col} controlId='formGridEmail'>
+                <Form.Control
+                  type='email'
+                  placeholder='Your Email'
+                  value={email}
+                  isInvalid={errors.email}
+                  className='text-line'
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+
+                <Form.Control.Feedback type='invalid'>
+                  {errors.email}
+                </Form.Control.Feedback>
+              </Form.Group>
+            </Form.Row>
+
+            <Form.Group controlId='formGridAddress1'>
+              <Form.Control
+                type='text'
+                placeholder='Subject'
+                value={subject}
+                isInvalid={errors.subject}
+                className='text-line'
+                onChange={(e) => setSubject(e.target.value)}
+              />
+
+              <Form.Control.Feedback type='invalid'>
+                {errors.subject}
+              </Form.Control.Feedback>
+            </Form.Group>
+
+            <Form.Group controlId='formTextarea'>
+              <Form.Control
+                as='textarea'
+                placeholder='Your Message'
+                value={message}
+                isInvalid={errors.message}
+                className='text-line'
+                onChange={(e) => setMessage(e.target.value)}
+                rows={6}
+              />
+
+              <Form.Control.Feedback type='invalid'>
+                {errors.message}
+              </Form.Control.Feedback>
+            </Form.Group>
+            {success && <Message variant='success'>{success}</Message>}
+            <div className='text-center'>
+              <Button className='contact-btn' type='submit'>
+                Send Message
+              </Button>
+            </div>
+          </Form>
         </div>
 
         <div class='row'>
@@ -75,79 +134,14 @@ const Contact = () => {
               </div>
             </div>
           </div>
-
-          <div class='col-lg-8'>
-            <Form onSubmit={submitHandler}>
-              <h2 className='py-1'>GET IN TOUCH WITH US.</h2>
-              <Form.Row>
-                <Form.Group as={Col} controlId='formGridName'>
-                  <Form.Control
-                    type='text'
-                    placeholder='Your Name'
-                    value={name}
-                    isInvalid={errors.name}
-                    className='text-line'
-                    onChange={(e) => setName(e.target.value)}
-                  />
-
-                  <Form.Control.Feedback type='invalid'>
-                    {errors.name}
-                  </Form.Control.Feedback>
-                </Form.Group>
-
-                <Form.Group as={Col} controlId='formGridEmail'>
-                  <Form.Control
-                    type='email'
-                    placeholder='Your Email'
-                    value={email}
-                    isInvalid={errors.email}
-                    className='text-line'
-                    onChange={(e) => setEmail(e.target.value)}
-                  />
-
-                  <Form.Control.Feedback type='invalid'>
-                    {errors.email}
-                  </Form.Control.Feedback>
-                </Form.Group>
-              </Form.Row>
-
-              <Form.Group controlId='formGridAddress1'>
-                <Form.Control
-                  type='text'
-                  placeholder='Subject'
-                  value={subject}
-                  isInvalid={errors.subject}
-                  className='text-line'
-                  onChange={(e) => setSubject(e.target.value)}
-                />
-
-                <Form.Control.Feedback type='invalid'>
-                  {errors.subject}
-                </Form.Control.Feedback>
-              </Form.Group>
-
-              <Form.Group controlId='formTextarea'>
-                <Form.Control
-                  as='textarea'
-                  placeholder='Your Message'
-                  value={message}
-                  isInvalid={errors.message}
-                  className='text-line'
-                  onChange={(e) => setMessage(e.target.value)}
-                  rows={6}
-                />
-
-                <Form.Control.Feedback type='invalid'>
-                  {errors.message}
-                </Form.Control.Feedback>
-              </Form.Group>
-              {success && <Message variant='success'>{success}</Message>}
-              <div className='text-center'>
-                <Button className='contact-btn' type='submit'>
-                  Send Message
-                </Button>
-              </div>
-            </Form>
+          <div class='pt-3 col-lg-8'>
+            <iframe
+              style={{ width: '100%', height: '270px' }}
+              title='map location'
+              src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2844.856021269435!2d74.44888923752985!3d31.476873046867944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39190920e59fccd3%3A0x56cae6ee2c7a479b!2sDHA%20Phase%206%2C%20Lahore%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1617100492948!5m2!1sen!2s'
+              frameborder='0'
+              allowfullscreen
+            ></iframe>
           </div>
         </div>
       </div>

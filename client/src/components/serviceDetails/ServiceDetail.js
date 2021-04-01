@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import { Row, Container, Col, Image, Button } from 'react-bootstrap'
+import Contact from '../contact/Contact'
 
 import ServiceData from '../../Data/serviceData'
 import './serviceDetail.css'
@@ -40,6 +41,11 @@ function ServiceDetail({ match }) {
           </Col>
           <Col lg={6} md={6} sm={12} xm={12}>
             <Image src={service.image} height='auto' width='100%' />
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <Contact />
           </Col>
         </Row>
       </Container>

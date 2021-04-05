@@ -18,7 +18,6 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-
       <Header />
       <main>
         <Switch>

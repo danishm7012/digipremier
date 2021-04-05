@@ -2,3 +2,37 @@
   color: white;
   font-size: 0.8rem;
 }
+.nav1 {
+  background-color: #121212;
+}
+
+.navbar {
+  background-color: #151515;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 3;
+
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.textcolors span {
+  color: aliceblue;
+}
+.textcolorsTopNav .faHeader {
+  font-size: 1em;
+  margin-right: 0.2rem;
+  color: #0098ed;
+}
+.textcolorsTopNav .faHeaderwhatsapp {
+  font-size: 2em;
+  margin-right: 0.6rem;
+  color: #0098ed;
+}
+
+@media screen and (max-width: 780px) {
+  .nav1 {
+    display: none;
+  }
+}

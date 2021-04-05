@@ -2,19 +2,22 @@ import React from 'react'
 import { Navbar, Nav } from 'react-bootstrap'
 import SamplePage from '../translatorApi/TestedApi'
 import '../translatorApi/TranslateAPI.css'
-function HeaaderTop() {
+function HeaderTop() {
   return (
     <div>
       <Navbar className='nav1' expand='md'>
-        <Nav className='ml-auto textcolors' navbar>
+        <Nav className='ml-auto textcolors'>
           <Nav.Item className='textcolorsTopNav'>
-            <Nav.Link href='https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=info@paradisegoc.com&su=Our beloved paradise goc&body=Leave a message!%20'>
+            <Nav.Link
+              href='https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=info@paradisegoc.com&su=Our beloved DigiPremier goc&body=Leave a message!%20'
+              target='_blank'
+            >
               <strong className='fas fa-envelope faHeader'></strong>
               <span>info@digipremier.org</span>
             </Nav.Link>
           </Nav.Item>
           <Nav.Item className='textcolorsTopNav'>
-            <Nav.Link href='tel:44 7391 758721'>
+            <Nav.Link href='tel:+923330668656' target='_blank'>
               <strong className='fas fa-phone-alt faHeader'></strong>
               <span>+92 333 0668 656</span>
             </Nav.Link>
@@ -29,4 +32,4 @@ function HeaaderTop() {
   )
 }
 
-export default HeaaderTop
+export default HeaderTop

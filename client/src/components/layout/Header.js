@@ -2,20 +2,21 @@ import React from 'react'
 import { Link } from 'react-scroll'
 import { Nav, Navbar, Container, NavDropdown } from 'react-bootstrap'
 import { LinkContainer } from 'react-router-bootstrap'
+import HeaderTop from './HeaderTop'
 import './header.css'
 
 const Header = () => {
   return (
     <>
+      <HeaderTop />
       <Navbar
         collapseOnSelect
+        className='navbar'
         expand='lg'
         style={{
-          padding: '0',
           backgroundColor: '#012c47',
         }}
         variant='dark'
-        fixed='top'
       >
         <Container>
           <Navbar.Brand href='/'>
@@ -23,7 +24,7 @@ const Header = () => {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='responsive-navbar-nav' />
           <Navbar.Collapse id='responsive-navbar-nav'>
-            <Nav className='mr-auto'>
+            <Nav className='mr-auto text-center'>
               <Link to='about'>
                 <LinkContainer to='/'>
                   <Nav.Link className='links-nav'>About</Nav.Link>
@@ -37,15 +38,21 @@ const Header = () => {
               </Link>
 
               <LinkContainer to='/info/clients'>
-                <Nav.Link className='links-nav'>Clients</Nav.Link>
+                <Nav.Link className='links-nav' active>
+                  Clients
+                </Nav.Link>
               </LinkContainer>
 
               <LinkContainer to='/info/blogs'>
-                <Nav.Link className='links-nav'>Blog</Nav.Link>
+                <Nav.Link className='links-nav' active>
+                  Blog
+                </Nav.Link>
               </LinkContainer>
 
               <LinkContainer to='/info/career'>
-                <Nav.Link className='links-nav'>Career</Nav.Link>
+                <Nav.Link className='links-nav' active>
+                  Career
+                </Nav.Link>
               </LinkContainer>
 
               <Link to='contact'>
@@ -57,6 +64,7 @@ const Header = () => {
                 className='links-nav'
                 title='Services'
                 id='collasible-nav-dropdown'
+                active
               >
                 <LinkContainer to='/SEO'>
                   <NavDropdown.Item>

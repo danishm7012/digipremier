@@ -22,13 +22,13 @@ const Testimonial = () => {
           <Col lg={3} md={3} sm={3}>
             <Card>
               <Card.Img src='/images/teams/4.png'></Card.Img>
-              <Card.Title>Project manager</Card.Title>
+              <Card.Title>Project Manager</Card.Title>
             </Card>
           </Col>
           <Col lg={3} md={3} sm={3}>
             <Card>
               <Card.Img src='/images/teams/3.png'></Card.Img>
-              <Card.Title>Project manager</Card.Title>
+              <Card.Title>QA Manager</Card.Title>
             </Card>
           </Col>
         </Row>

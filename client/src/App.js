@@ -10,7 +10,7 @@ import ServiceDetail from './components/serviceDetails/ServiceDetail'
 import Career from './components/career/Career'
 import Clients from './components/clients/Clients'
 import Blogs from './components/Blogs/Blogs'
-import BlogDetail from './components/BlogDetail/BlogDetail'
+import BlogDetail from './components/Blogs/blogDetail'
 import ScrollToTop from './components/common/scrollToTop'
 
 function App() {

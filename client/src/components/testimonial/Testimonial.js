@@ -28,7 +28,7 @@ const Testimonial = () => {
           <Col lg={3} md={3} sm={3}>
             <Card>
               <Card.Img src='/images/teams/3.png'></Card.Img>
-              <Card.Title>QA Manager</Card.Title>
+              <Card.Title>PPC Expert</Card.Title>
             </Card>
           </Col>
         </Row>

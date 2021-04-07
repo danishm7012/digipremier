@@ -41,7 +41,7 @@ const Share = () => {
             size={40}
           ></TwitterIcon>
         </TwitterShareButton>
-        <WhatsappShareButton url='https://api.whatsapp.com/send?phone=44 7379 331419'>
+        <WhatsappShareButton url='https://api.whatsapp.com/send?phone=+447379331419'>
           <WhatsappIcon
             className='py-1 shareIcon'
             logoFillColor='white'

@@ -1,9 +1,23 @@
 import React from 'react'
-
+import Meta from '../common/Meta'
+import { Container, Row, Col } from 'react-bootstrap'
+import BlogData from '../../Data/BlogsData'
+import Blog from './Blog'
+import './blogs.css'
 const Blogs = () => {
   return (
     <div className='section'>
-      <h1>Blogs Section is under development.</h1>
+      <Meta title='Blogs - Digi Premier' />
+      <Row>
+        <Col className='text-center'>
+          <h1>Blogs</h1>
+        </Col>
+      </Row>
+      <Container>
+        {BlogData.map((blog) => (
+          <Blog blog={blog} />
+        ))}
+      </Container>
     </div>
   )
 }

@@ -8,6 +8,7 @@ import Footer from './components/layout/Footer'
 import Home from './screens/Home'
 import ServiceDetail from './components/serviceDetails/ServiceDetail'
 import Career from './components/career/Career'
+import QuoteForm from './components/quoteForm/quoteForm'
 import Clients from './components/clients/Clients'
 import Blogs from './components/Blogs/Blogs'
 import BlogDetail from './components/Blogs/blogDetail'
@@ -22,6 +23,7 @@ function App() {
       <main>
         <Switch>
           <Route path='/info/career' exact component={Career} />
+          <Route path='/info/GetQuote' exact component={QuoteForm} />
           <Route path='/info/blogs' exact component={Blogs} />
           <Route path='/info/clients' exact component={Clients} />
           <Route path='/blogs/:_id' exact component={BlogDetail} />

@@ -49,3 +49,6 @@ h5 {
 .contact-btn:hover {
   background: #ed9321;
 }
+.lowercase {
+  text-transform: lowercase;
+}

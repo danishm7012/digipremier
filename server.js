@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 const contact = require('./routes/api/contact')
 const career = require('./routes/api/career')
 const newslatter = require('./routes/api/news')
+const quote = require('./routes/api/qoute')
 
 const path = require('path')
 const cors = require('cors')
@@ -31,6 +32,7 @@ mongoose
 app.use('/api/contact/', contact)
 app.use('/api/career/', career)
 app.use('/api/news/', newslatter)
+app.use('/api/quote/', quote)
 
 // Server static assets if in production
 if (process.env.NODE_ENV === 'production') {

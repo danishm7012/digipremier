@@ -13,7 +13,7 @@ function HeaderTop() {
               target='_blank'
             >
               <strong className='fas fa-envelope faHeader'></strong>
-              <span>info@digipremier.org</span>
+              <span className='lowercase'>info@digipremier.org</span>
             </Nav.Link>
           </Nav.Item>
           <Nav.Item className='textcolorsTopNav'>

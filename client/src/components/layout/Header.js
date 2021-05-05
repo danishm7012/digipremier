@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-scroll'
-import { Nav, Navbar, Container, NavDropdown } from 'react-bootstrap'
+import { Nav, Navbar, Container, NavDropdown, Button } from 'react-bootstrap'
 import { LinkContainer } from 'react-router-bootstrap'
 import HeaderTop from './HeaderTop'
 import './header.css'
@@ -24,87 +24,133 @@ const Header = () => {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='responsive-navbar-nav' />
           <Navbar.Collapse id='responsive-navbar-nav'>
-            <Nav className='mr-auto text-center'>
+            <Nav className='ml-auto text-center'>
               <Link to='about'>
                 <LinkContainer to='/'>
-                  <Nav.Link className='links-nav'>About</Nav.Link>
-                </LinkContainer>
-              </Link>
-
-              <Link to='testimonial'>
-                <LinkContainer to='/'>
-                  <Nav.Link className='links-nav'>Testimonials</Nav.Link>
-                </LinkContainer>
-              </Link>
-
-              <LinkContainer to='/info/clients'>
-                <Nav.Link className='links-nav' active>
-                  Clients
-                </Nav.Link>
-              </LinkContainer>
-
-              <LinkContainer to='/info/blogs'>
-                <Nav.Link className='links-nav' active>
-                  Blog
-                </Nav.Link>
-              </LinkContainer>
-
-              <LinkContainer to='/info/career'>
-                <Nav.Link className='links-nav' active>
-                  Career
-                </Nav.Link>
-              </LinkContainer>
-
-              <Link to='contact'>
-                <LinkContainer to='/'>
-                  <Nav.Link className='links-nav'>Contact</Nav.Link>
+                  <Nav.Link className='links-nav'>Home</Nav.Link>
                 </LinkContainer>
               </Link>
               <NavDropdown
                 className='links-nav'
-                title='Services'
+                style={{ marginRight: '0px' }}
+                title='Digital Marketing'
                 id='collasible-nav-dropdown'
                 active
               >
                 <LinkContainer to='/SEO'>
-                  <NavDropdown.Item>
-                    Search Engine Optimization
-                  </NavDropdown.Item>
+                  <NavDropdown.Item>Organic SEO</NavDropdown.Item>
                 </LinkContainer>
 
-                <LinkContainer to='/SEM'>
-                  <NavDropdown.Item>Search Engine Marketing</NavDropdown.Item>
+                <LinkContainer to='/SEO'>
+                  <NavDropdown.Item>Local SEO</NavDropdown.Item>
                 </LinkContainer>
 
                 <LinkContainer to='/PPC'>
-                  <NavDropdown.Item>PPC</NavDropdown.Item>
+                  <NavDropdown.Item>SEM (PPC)</NavDropdown.Item>
                 </LinkContainer>
                 <LinkContainer to='/SMM'>
-                  <NavDropdown.Item>Social Media Marketing</NavDropdown.Item>
-                </LinkContainer>
-
-                <LinkContainer to='/Back-Link-Building'>
-                  <NavDropdown.Item>Back-Link Building</NavDropdown.Item>
-                </LinkContainer>
-
-                <LinkContainer to='/Content-Marketing'>
-                  <NavDropdown.Item>Content Marketing</NavDropdown.Item>
-                </LinkContainer>
-
-                <LinkContainer to='/Affiliate-Marketing'>
-                  <NavDropdown.Item>Affiliate Marketing</NavDropdown.Item>
-                </LinkContainer>
-
-                <LinkContainer to='/Email-SMS-Marketing'>
-                  <NavDropdown.Item>Email & SMS Marketing</NavDropdown.Item>
-                </LinkContainer>
-
-                <LinkContainer to='/Radio-Television-Marketing'>
                   <NavDropdown.Item>
-                    Radio & Television Marketing
+                    Social Media Marketing (SMM)
                   </NavDropdown.Item>
                 </LinkContainer>
+
+                <LinkContainer to='/SEO'>
+                  <NavDropdown.Item>Lead Generation</NavDropdown.Item>
+                </LinkContainer>
+
+                <LinkContainer to='/SEO'>
+                  <NavDropdown.Item>Website Audit</NavDropdown.Item>
+                </LinkContainer>
+
+                <LinkContainer to='/SEO'>
+                  <NavDropdown.Item>SEO Audit</NavDropdown.Item>
+                </LinkContainer>
+
+                <LinkContainer to='/SEO'>
+                  <NavDropdown.Item>
+                    YouTube Video Optimization
+                  </NavDropdown.Item>
+                </LinkContainer>
+
+                <LinkContainer to='/SEO'>
+                  <NavDropdown.Item>App Store Optimization</NavDropdown.Item>
+                </LinkContainer>
+                <LinkContainer to='/SEO'>
+                  <NavDropdown.Item>Content Creation</NavDropdown.Item>
+                </LinkContainer>
               </NavDropdown>
+              <NavDropdown
+                className='links-nav'
+                style={{ marginRight: '0px' }}
+                title='Development'
+                id='collasible-nav-dropdown'
+                active
+              >
+                <LinkContainer to='/SEO'>
+                  <NavDropdown.Item>Android Development</NavDropdown.Item>
+                </LinkContainer>
+                <LinkContainer to='/SEO'>
+                  <NavDropdown.Item>iOS Development</NavDropdown.Item>
+                </LinkContainer>
+                <LinkContainer to='/SEO'>
+                  <NavDropdown.Item>Software Development</NavDropdown.Item>
+                </LinkContainer>
+                <LinkContainer to='/SEO'>
+                  <NavDropdown.Item>Web Development</NavDropdown.Item>
+                </LinkContainer>
+                <LinkContainer to='/SEO'>
+                  <NavDropdown.Item>
+                    Bespoke Software Development
+                  </NavDropdown.Item>
+                </LinkContainer>
+                <LinkContainer to='/SEO'>
+                  <NavDropdown.Item>Front-end Development</NavDropdown.Item>
+                </LinkContainer>
+              </NavDropdown>
+              <NavDropdown
+                className='links-nav'
+                style={{ marginRight: '0px' }}
+                title='Designing'
+                id='collasible-nav-dropdown'
+                active
+              >
+                <LinkContainer to='/SEO'>
+                  <NavDropdown.Item>Logo Designing</NavDropdown.Item>
+                </LinkContainer>
+
+                <LinkContainer to='/SEO'>
+                  <NavDropdown.Item>Web Designing</NavDropdown.Item>
+                </LinkContainer>
+              </NavDropdown>
+
+              <Link to='testimonial'>
+                <LinkContainer to='/'>
+                  <Nav.Link className='links-nav'></Nav.Link>
+                </LinkContainer>
+              </Link>
+
+              <Link to='contact'>
+                <LinkContainer to='/'>
+                  <Nav.Link className='links-nav'>Testimonial</Nav.Link>
+                </LinkContainer>
+              </Link>
+              <Link to='contact'>
+                <LinkContainer to='/'>
+                  <Nav.Link className='links-nav'>Portfolio</Nav.Link>
+                </LinkContainer>
+              </Link>
+              <Link to='contact'>
+                <LinkContainer to='/info/blogs'>
+                  <Nav.Link className='links-nav' active>
+                    News Updates
+                  </Nav.Link>
+                </LinkContainer>
+              </Link>
+              <LinkContainer to='/info/GetQuote'>
+                <Button variant='outline-warning' size='sm'>
+                  Request a Quote
+                </Button>
+              </LinkContainer>
             </Nav>
           </Navbar.Collapse>
         </Container>

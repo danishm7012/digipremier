@@ -1,8 +1,8 @@
 const teams = [
   {
-    _id: 'SEO',
+    _id: 'Organic-SEO',
 
-    name: 'SEO (Search Engine Optimazation)',
+    name: 'Organic SEO (Search Engine Optimazation)',
     icon: 'fa-link',
     text:
       'It is Search engine optimization that is purposefully used for optimizing websites and contents.',
@@ -11,15 +11,15 @@ const teams = [
       'It is Search engine optimization that is purposefully used for optimizing websites and contents. The main aim is to show up the website in search engines like Quora, google, firefox, duck duck go, and all other browsers. The main idea revolves around using key phrases and keywords in the content that the searchers commonly use. These are to be used in the content body, website URL, title, etc. For better results: organic search and use of links in the contents what helps mainly in the range.',
   },
   {
-    _id: 'SEM',
+    _id: 'Local-SEO',
 
-    name: 'SEM (Search Engine Marketing)',
+    name: 'Local SEO',
     icon: 'fa-link',
     text:
-      'Search Engine Marketing is the paid advertising for achieving more traffic from all search engines.',
+      'we offer Local SEO services that rank your website higher in your local community.',
     image: '/images/banners/SEM.jpg',
     detail:
-      'Compared to SEO which is unpaid marketing, Search Engine Marketing is the paid advertising for achieving more traffic from all search engines. The standard form used for Search Engine Marketing is Google Adwords, and this is the reason why it is a highly used search engine. Here the owner needs to pay the search engine. The marketer has to pay a suitable amount to the search engine for showing the marketing content to the target audience at various places with specific phrases or keywords used for search results of the related content.',
+      'The recent ‘Pigeon Update’ by Google suggests that local SEO will remain a critical ranking factor. In compliance with this update, we offer Local SEO services that rank your website higher in your local community.',
   },
   {
     _id: 'SMM',
@@ -32,6 +32,7 @@ const teams = [
     detail:
       'Social Media is power itself these days that targets not only youth but people of all age groups. Advertisement through this platform is very beneficial and economical. Sharing engaging content about your product, company, services, etc., grabs a lot of attention from the readers and attracts them to reach details further and approach you. It helps in promoting everything in front of your users and competitors. It helps in targeting conversations and increasing awareness among people. For choosing this option for marketing, you need to be very careful and have enough knowledge of that platform.',
   },
+
   {
     _id: 'Back-Link-Building',
 
@@ -46,7 +47,7 @@ const teams = [
   {
     _id: 'PPC',
 
-    name: 'PPC (Pay Per Click)',
+    name: 'SEM PPC (Pay Per Click)',
     icon: 'fa-link',
     text:
       'Pay Per Click Advertising is the method of paying other websites for every click to their website’s link.',
@@ -55,9 +56,9 @@ const teams = [
       'Pay Per Click Advertising is like the SEM as it is the method of paying other websites for every click to their website’s link. This method works for every social network apart from search engines. The ads usually appear in the feed where the attention of the targeted audience can be approached. This model of internet marketing is rising and is popular among many marketers. It is the way of buying visitors to earn more through the clicking strategies. There are further many types of PPC advertising that work efficiently for marketing purposes. You need proper assistance regarding which option you should go with, and for that, you need advice from my team of experts.',
   },
   {
-    _id: 'Content-Marketing',
+    _id: 'Content-creation',
 
-    name: 'Content Marketing',
+    name: 'Content Creation',
     icon: 'fa-link',
     text:
       'Art of telling valuable information to the target audience for reaching goals and spreading awareness.',

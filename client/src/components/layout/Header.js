@@ -20,7 +20,7 @@ const Header = () => {
       >
         <Container>
           <Navbar.Brand href='/'>
-            <img src='/images/logo.ai' alt='logo' height='70' width='150' />
+            <img src='/images/logo.png' alt='logo' height='70' width='150' />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='responsive-navbar-nav' />
           <Navbar.Collapse id='responsive-navbar-nav'>
@@ -31,7 +31,7 @@ const Header = () => {
                 </LinkContainer>
               </Link>
               <NavDropdown
-                className='links-nav text-center'
+                className='links-nav'
                 style={{ marginRight: '0px' }}
                 title='Digital Marketing'
                 id='collasible-nav-dropdown'

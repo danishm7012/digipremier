@@ -163,7 +163,62 @@ const Footer = () => {
                   </Form>
                 </div>
               </div>
+              <div className='row'>
+                <div class='col-lg-4 col-md-4 col-sm-12'>
+                  <p>
+                    <br />
+                    <span className='office-name'>Dubai Office:</span> Park Lane
+                    Plaza, 12th Floor, Office No. 1213, Down Town, Dubai UAE.
+                    P.O. BOX 415253 <br />
+                    <br />
+                    <strong>
+                      <i className='fas fa-phone'></i>
+                      {'  '}
+                      <i className='fab fa-whatsapp '></i>
+                    </strong>
+                    {'   '}
+                    +971 58 1439463
+                    <br />
+                    <strong>
+                      <i className='fas fa-phone'></i>
+                      {'  '}
+                      <i className='fab fa-whatsapp '></i>
+                    </strong>
+                    {'   '}
+                    +971 54 5277366
+                  </p>
+                </div>
+                <div class='col-lg-4 col-md-4 col-sm-12'>
+                  <p>
+                    <br />
+                    <span className='office-name'>London Office:</span> London
+                    Office: 3rd Floor, 244 Edgware Road, London W2 1DS, UK.{' '}
+                    <br />
+                    <br />
+                    <strong>
+                      <i className='fab fa-whatsapp '></i>
+                    </strong>
+                    {'   '}
+                    +44 7391 758 721
+                  </p>
+                </div>
+                <div class='col-lg-4 col-md-4 col-sm-12'>
+                  <p>
+                    <br />
+                    <span className='office-name'>Lahore Office:</span> 2nd
+                    Floor MB-269, DHA phase 6, Lahore, Pakistan.
+                    <br />
+                    <br />
+                    <strong>
+                      <i className='fas fa-phone'></i>
+                    </strong>
+                    {'   '}
+                    +92 333 0671555
+                  </p>
+                </div>
+              </div>
             </div>
+
             <div className='pt-4 copy-write text-white text-center'>
               Copyright &copy; {new Date().getFullYear()}
               <strong>

@@ -3,7 +3,9 @@
   color: #fff;
   font-size: 1rem;
 }
-
+.office-name {
+  color: #0098ed;
+}
 #footer .footer-top {
   background: #151515;
   border-bottom: 1px solid #222222;

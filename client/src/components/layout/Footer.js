@@ -167,7 +167,7 @@ const Footer = () => {
                 <div class='col-lg-4 col-md-4 col-sm-12'>
                   <p>
                     <br />
-                    <span className='office-name'>Dubai Office:</span> Park Lane
+                    <span className='office-name'>UAE Office:</span> Park Lane
                     Plaza, 12th Floor, Office No. 1213, Down Town, Dubai UAE.
                     P.O. BOX 415253 <br />
                     <br />
@@ -191,9 +191,8 @@ const Footer = () => {
                 <div class='col-lg-4 col-md-4 col-sm-12'>
                   <p>
                     <br />
-                    <span className='office-name'>London Office:</span> London
-                    Office: 3rd Floor, 244 Edgware Road, London W2 1DS, UK.{' '}
-                    <br />
+                    <span className='office-name'>UK Office:</span>
+                    3rd Floor, 244 Edgware Road, London W2 1DS, UK. <br />
                     <br />
                     <strong>
                       <i className='fab fa-whatsapp '></i>
@@ -205,7 +204,7 @@ const Footer = () => {
                 <div class='col-lg-4 col-md-4 col-sm-12'>
                   <p>
                     <br />
-                    <span className='office-name'>Lahore Office:</span> 2nd
+                    <span className='office-name'>Pakistan Office:</span> 2nd
                     Floor MB-269, DHA phase 6, Lahore, Pakistan.
                     <br />
                     <br />

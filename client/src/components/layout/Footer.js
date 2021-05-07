@@ -51,6 +51,8 @@ const Footer = () => {
                           src='/images/logo.png'
                           className='d-inline-block align-top '
                           alt='DIGI Premier'
+                          height='70'
+                          width='250'
                         />
                       </LinkContainer>
                     </Link>

@@ -1,11 +1,13 @@
-import React from 'react'
 import About from '../components/about/About'
-import Testimonial from '../components/testimonial/Testimonial'
-import Services from '../components/services/Services'
-import Hero from '../components/hero/Hero'
 import Contact from '../components/contact/Contact'
-import SocailShare from '../components/socialShare/Share'
+import Hero from '../components/hero/Hero'
 import Meta from '../components/common/Meta'
+import Ranking from '../components/rankingSatisfaction/RankingSatisfaction.js'
+import React from 'react'
+import Services from '../components/services/Services'
+import SocailShare from '../components/socialShare/Share'
+import Testimonial from '../components/testimonial/Testimonial'
+import TestmonialSlider from '../components/testmonialSlider/TestmonialSlider'
 
 const Home = () => {
   return (
@@ -16,6 +18,8 @@ const Home = () => {
       <About />
       <Services />
       <Contact />
+      <Ranking />
+      <TestmonialSlider />
       <Testimonial />
     </>
   )

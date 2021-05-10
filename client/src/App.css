@@ -52,3 +52,14 @@ h5 {
 .lowercase {
   text-transform: lowercase;
 }
+.ranking {
+  display: flex;
+  justify-content: space-around;
+  font-family: sans-serif;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.time {
+  font-size: 32px;
+}

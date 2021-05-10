@@ -1,0 +1,24 @@
+.company-card {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.company-card-img {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+.company-card-img:hover {
+  opacity: 1;
+  color: azure;
+  filter: none;
+
+  transform: scale(1.2);
+  font-weight: bold;
+  box-shadow: 0 0 0 0 #d3d3d3;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
